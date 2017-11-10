@@ -1,23 +1,24 @@
-function remove_duplicates(arr){
-  for (var i = 0; i < arr.length; i++) {
-    increment= i + 1
-    if (arr[i]===arr[increment]) {
-      arr.splice(arr[increment],1)
+const removeDuplicates = (array) => {
+  const newArray = []
 
-    } else {
-      increment+1
+  for (let i = 0; i < array.length; i++) {
+    const currentNumber = array[i]
+    const isInNewArray = newArray.indexOf(currentNumber) > -1
+
+    if (isInNewArray === false) {
+      newArray.push(currentNumber)
     }
   }
-console.log(arr);
+
+  return newArray
 }
 
-
-
-remove_duplicates([1,2,3,4])
-remove_duplicates([1,1,1,1])
-remove_duplicates([1,1,2,2])
-remove_duplicates([1,2,1,2])
-
+console.log(
+  removeDuplicates([1,2,3,4]),
+  removeDuplicates([1,1,1,1]),
+  removeDuplicates([1,1,2,2]),
+  removeDuplicates([1,2,1,2])    
+)
 
 // Existe também uma saída mais clean code referente a esse código, porem não sabia se ela se encaixava na característica de
 //"função pronta", que foi citada acima. Mas de qualquer forma segue a abaixo:
