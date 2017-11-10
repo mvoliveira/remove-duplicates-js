@@ -1,23 +1,21 @@
-const removeDuplicates = (array) => {
-  const newArray = []
+const removeDuplicatesFrom = array => {
+  const filteredArray = []
 
   for (let i = 0; i < array.length; i++) {
-    const currentNumber = array[i]
-    const isInNewArray = newArray.indexOf(currentNumber) > -1
-
-    if (isInNewArray === false) {
-      newArray.push(currentNumber)
-    }
+    const currentElement = array[i]
+    const isInNewArray = filteredArray.indexOf(currentElement) > -1
+    
+    if (isInNewArray === false) filteredArray.push(currentElement)
   }
 
-  return newArray
+  return filteredArray
 }
 
 console.log(
-  removeDuplicates([1,2,3,4]),
-  removeDuplicates([1,1,1,1]),
-  removeDuplicates([1,1,2,2]),
-  removeDuplicates([1,2,1,2])    
+  removeDuplicatesFrom([1,2,3,4]),
+  removeDuplicatesFrom([1,1,1,1]),
+  removeDuplicatesFrom([1,1,2,2]),
+  removeDuplicatesFrom([1,2,1,2])    
 )
 
 // Existe também uma saída mais clean code referente a esse código, porem não sabia se ela se encaixava na característica de
