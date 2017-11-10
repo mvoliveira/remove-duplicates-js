@@ -1,14 +1,14 @@
-function remove_duplicates(array){
-  for (var i = 0; i < array.length; i++) {
+function remove_duplicates(arr){
+  for (var i = 0; i < arr.length; i++) {
     increment= i + 1
-    if (array[i]===array[increment]) {
-      array.splice(array[increment],1)
+    if (arr[i]===arr[increment]) {
+      arr.splice(arr[increment],1)
 
     } else {
       increment+1
     }
   }
-console.log(array);
+console.log(arr);
 }
 
 
